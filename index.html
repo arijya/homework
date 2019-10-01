@@ -180,37 +180,48 @@
 
     <!-- modal -->
     <div class="modal" id="modal">
-
-        <h2> <i class="fas fa-home"></i> Обратная связь</h2>
+        
+        <h2 class="modal__title"> <i class="fas fa-home"></i> Обратная связь</h2>
+        <span class="close">&times;</span>
         <form>
             <div class="modal-input">
                 <div>
                     <label for="name">Имя:</label>
-                    <input type="text" name="username" placeholder="Введите ваше имя" id="name">
+                    <input type="text" name="username" placeholder="Введите ваше имя" required id="name">
                 </div>
                 <div>
                     <label for="email">Email:</label>
-                    <input type="email" name="password" placeholder="Введите адрес Вашей почты" id="email">
+                    <input type="email" name="password" placeholder="Введите адрес Вашей почты" required id="email">
                 </div>
                 <div>
                     <label for="number">Телефон:</label>
-                    <input type="tel" name="telephon" placeholder="Введите номер телефона" id="number">
+                    <input type="tel" name="telephon" placeholder="Введите номер телефона" required id="number">
                 </div>
                 <div>
                     <label for="message">Сообщение</label>
-                    <textarea name="message" placeholder="Текст сообщения" id="message" cols="30" rows="10"></textarea>
+                    <textarea name="message" placeholder="Текст сообщения" required id="message" cols="30" rows="10"></textarea>
                 </div>
 
-                <input type="button" value="Отправить">
+                <input type="button" value="Отправить" required>
 
             </div>
         </form>
 
-
     </div>
 
     <script>
-        
+        var modal = document.getElementById('modal');
+        var btn = document.getElementById('btn');
+        var span = document.getElementsByClassName('close')[0];
+
+        btn.onclick = function() {
+            modal.style.display = "flex";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
     </script>
 
 </body>

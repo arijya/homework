@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 12px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    border-bottom: 1px solid #000;
+}
+
+ul {
+    list-style: none;
+}
+
+.wrapper {
+    max-width: 814px;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    border-bottom: 3px solid #dbdbdb;
+}
+
+.header__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.header__logo img {
+    height: 52px;
+}
+
+.header__items,
+.footer__items {
+    display: flex;
+}
+
+.header__item,
+.footer__item {
+    margin-left: 13px;
+}
+
+.header__item:first-child,
+.footer__item:first-child {
+    margin-left: 0;
+}
+
+.header__btn {
+    padding: 8px 12px;
+    color: #fff;
+    background-color: #6533b6;
+    border: 1px solid #6533b6;
+    box-shadow: 1px 3px 5px rgba(28, 49, 230, .8);
+    border-radius: 5px;
+}
+
+.header__btn:hover {
+    background-color: #fff;
+    color: #6533b6;
+}
+
+/* end header */
+
+/* MAIN */
+.main__wrap {
+    display: flex;
+    margin-top: 20px;
+}
+
+.menu__categories {
+    width: 20%;
+    margin-right: 20px;
+}
+
+.section__wrap {
+    width: 80%;
+}
+
+section,
+.menu__wrap {
+    background-color: #efefef;
+    border: 1px solid #dbdbdb;
+}
+
+/* menu */
+.categories__items {
+    padding: 25px 0 25px 40px;
+}
+
+.categories__item {
+    margin-top: 10px;
+}
+
+.categories__item:first-child {
+    margin-top: 0;
+}
+
+.categories__link {
+    position: relative;
+    font-size: 14px;
+}
+
+.categories__link::before {
+    content: url(../images/checkmark.svg);
+    position: absolute;
+    left: -30px;
+    top: 0px;
+    zoom: 0.7;
+}
+
+.categories__link:hover::before {
+    content: url(../images/checkmark_filled.svg);
+    position: absolute;
+    left: -30px;
+    top: 0px;
+    zoom: 0.7;
+}
+
+/* end menu */
+
+/* section title */
+.main__title,
+.main__about {
+    padding: 25px 15px 25px 15px;
+    margin-bottom: 20px;
+}
+
+.main__title p {
+    margin-top: 20px;
+}
+
+/* end section title */
+
+/* about */
+.about__windows {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.window__wrap {
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.window1,
+.window2,
+.window3 {
+    position: relative;
+}
+
+.window1::before,
+.window2::before,
+.window3::before {
+    content: url(../images/fire.svg);
+    display: block;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 92%;
+    top: -2%;
+}
+
+.window2::before {
+    content: url(../images/tag.svg);
+}
+
+.window3::before {
+    content: url(../images/award.svg);
+}
+
+.about__window {
+    background: #fff;
+}
+
+.about__window img {
+    width: 40px;
+    margin-top: 18px;
+}
+
+.window__title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.window__list .window__item {
+    text-align: left;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.window__item:last-child {
+    margin-bottom: 15px;
+}
+
+
+.window__item::before {
+    content: url(../images/star.svg);
+    position: absolute;
+    left: 5px;
+    zoom: .6;
+}
+
+/* and about */
+/* end MAIN */
+
+.footer__menu {
+    display: flex;
+    justify-content: center;
+    background-color: #efefef;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 2px solid #dbdbdb;
+}
+
+
+
+
+@media (max-width: 830px) {
+
+    .wrapper {
+        max-width: 814px;
+        margin: 20px 15px 0;
+    }
+}
+
+@media (max-width: 680px) {
+
+    .categories__items {
+        padding-left: 25px;
+        ;
+    }
+
+    .about__windows {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .header__wrap {
+        flex-direction: column;
+    }
+
+    .header__menu {
+        margin-bottom: 10px;
+    }
+
+    .about__windows {
+        grid-template-columns: auto;
+    }
+
+    .window__list p {
+        padding-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 330px) {
+
+    .categories__items {
+        margin-top: 5px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+
+    }
+
+    .categories__item {
+        margin-top: 25px;
+    }
+
+    .categories__link::before,
+    .categories__link:hover::before {
+        left: 10px;
+        top: -30px;
+    }
+
+}
